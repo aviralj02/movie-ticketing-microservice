@@ -29,6 +29,10 @@ This project is a microservice-based architecture for a movie ticket booking app
 | **Showtime Service** | Handles scheduling and seat availability for movie showtimes.                        |
 | **Booking Service**  | Manages ticket booking operations and retrieves user-specific booking details.       |
 
+### Architectural Flow
+
+![architecture](./media/movie-ticketing-architecture.png)
+
 ### ⚙️ Local Setup
 
 - Clone the repository:
@@ -47,14 +51,14 @@ cd movie-ticketing-microservice
 
 #### 1. User Service
 
-`POST /api/user/register`: Register a new user.
-`POST /api/user/login`: Authenticate and get JWT token.
+- `POST /api/user/register`: Register a new user.
+- `POST /api/user/login`: Authenticate and get JWT token.
 
 #### 2. Movie Service
 
 - `GET /api/movies`: Retrieve all movies.
 - `GET /api/movies/{id}`: Retrieve a specific movie by ID.
-- Admin Routes (Protected):
+- Admin Routes:
   - `POST /api/movies/admin`: Add a new movie.
   - `PUT /api/movies/admin/{id}`: Update a movie.
   - `DELETE /api/movies/admin/{id}`: Delete a movie.
@@ -63,7 +67,7 @@ cd movie-ticketing-microservice
 
 - `GET /api/showtimes`: Retrieve all showtimes.
 - `GET /api/showtimes/{id}`: Retrieve a specific showtime by ID.
-- Admin Routes (Protected):
+- Admin Routes:
   - `POST /api/showtimes/admin`: Add a new show.
 
 #### 4. Booking Service
